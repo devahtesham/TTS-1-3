@@ -1,0 +1,33 @@
+/* h1{
+    background-color: aqua;
+}
+p{
+background-color: #000;    
+color: #fff;
+} */
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    background-color: #000;
+    color: #fff;
+    padding: 9px 100px;
+    font-size: 30px;
+}
+.clock-inner{
+margin: 10px 0;
+}
+.clock-inner span{
+    margin-right: 20px; 
+}
+.date{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
