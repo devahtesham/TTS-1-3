@@ -1,0 +1,16 @@
+button{
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.box{
+    margin-top: 20px;
+}
+.box input{
+    margin-top: 10px;
+}
