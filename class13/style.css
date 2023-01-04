@@ -1,0 +1,24 @@
+.calc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    max-width: 14%;
+    margin: 66px auto;
+}
+button{
+    background-color: blueviolet;
+    color: #fff;
+    padding: 10px 17px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 18px;
+    border: none;
+    box-shadow: 0 0 15px 0 #000c;
+    cursor: pointer;
+}
+.screen{
+    font-size: 28px;
+    margin: 11px 0;
+}
