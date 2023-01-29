@@ -1,6 +1,6 @@
 // ================== LOCAL STORAGE ============
 // let myName = "ahtesham";
-// // add data in LS
+// add data in LS
 // localStorage.setItem("NAME",myName)
 
 // let value = localStorage.getItem("NAME")
@@ -8,7 +8,7 @@
 
 // ================
 // window.onload = ()=>{
-//     let myItem = localStorage.getItem("data1");
+//     // let myItem = localStorage.getItem("data1");
 //     console.log("myItem",myItem)
 //     const items = document.querySelector(".items");
 //     items.innerHTML += `
@@ -21,10 +21,11 @@
 // const form = document.querySelector("form");
 // form.addEventListener("submit",(e)=>{
 //     e.preventDefault()
-//     let arr=[]
+  
+//     // let arr=[]
 //     let value = e.target.searchBar.value;
-//     // console.log(value)
-//     localStorage.setItem("data1",value)
+//     // // console.log(value)
+//     // // localStorage.setItem("data1",value)
     
 //     const items = document.querySelector(".items");
 //     items.innerHTML += `
@@ -32,6 +33,8 @@
 //             ${value}
 //         </div>
 //     `
+//     // e.target.searchBar.value = ""
+//     // form.reset()
 // })
 // ===================== REMOVE ANY ITEM IN LOCAL STORAGE ===================
 //  localStorage.removeItem("data1")
@@ -82,13 +85,66 @@
 // })
 // =========== promise.all() ==================
 /*
-promise.all() accepts array of promises
+promise.all([]) accepts array of promises
 */
-// ================== FETCH API ============ 
-fetch("https://fakestoreapi.com/products/").then((response)=>{
-    return response.json() // convert json format data into JS object
-}).then((data)=>{
-    console.log(data)
-}).catch((err)=>{
-    console.log(err)
+// ================== HTTP SERVER STATUS CODES ============
+/*
+    200 ======>> OK, successffully
+    500 ======= >> error, internal server error
+    404 ======= >> invalid response
+*/
+
+// ================== FETCH API ============
+/*
+    API REQUEST TYPES:-
+    CRUD:- Create Read Update Delete
+    1. GET
+    2. POST
+    3. PUT
+    4. DELETE
+*/
+// whenever we deal with api, we use fetch
+// syntax:- fetch("api/url","method")
+fetch("https://fakestoreapi.com/products").then(response => response.json())
+.then((data)=>{
+    const card = document.getElementById("productCard");
+    // console.log(data)
+    data.map((prod)=>{
+        let prodImg = prod.image;
+        let prodTitle = prod.category;
+        let prodDescription = prod.description;
+        let prodPrice = prod.price;
+
+        card.innerHTML += `
+            <div class="col-md-3 border" >
+                <div>
+                    <img src="${prodImg}" alt="" class="w-100">
+                </div>
+                <h3>${prodTitle}</h3>
+                <p>${prodDescription}</p>
+                <h3>${prodPrice}</h3>
+            </div>
+        `  
+    })
+    // let prodObj = data[0]
+    // let prodImg = prodObj.image;
+    // let prodTitle = prodObj.category;
+    // let prodDescription = prodObj.description;
+    // let prodPrice = prodObj.price;
+
+
+    // card.innerHTML = `
+    //     <div class="col-md-3 border" >
+    //         <div>
+    //             <img src="${prodImg}" alt="" class="w-100">
+    //         </div>
+    //         <h3>${prodTitle}</h3>
+    //         <p>${prodDescription}</p>
+    //         <h3>${prodPrice}</h3>
+    //     </div>
+    // `  
+   
+}).catch((error)=>{
+    console.log("THIS IS THEN CATCH")
+    console.log(error)
 })

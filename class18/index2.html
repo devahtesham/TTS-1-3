@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="timer"></div>
+    <div class="cotent">
+        <h2 id="count"></h2>
+        <button onclick="countClick( )" >Change bgColor</button>
+        <!-- <button onclick="timer()">Change</button> -->
+    </div>
+    <br>
+    <div> <span id="time">0</span> seconds!</div>
+
+</body>
+
+
+
+<script>
+console.log("Pakistan");
+
+let second = 0
+const timer = ()=>{
+        console.clear()
+    
+        if(second<=5){
+            document.getElementById("time").innerHTML = second
+            setTimeout(timer, 1000)
+        }
+       second += 1
+    }
+
+let count = 0
+document.getElementById("count").innerHTML = count
+
+ function countClick(){
+    count++
+    document.getElementById("count").innerHTML = count
+
+    let a = Math.random()*255
+    let b = Math.random()*255
+    let c = Math.random()*255
+    document.body.style.backgroundColor=`rgb(${a},${b},${c})`
+    setTimeout(timer,1000)
+}   
+
+
+
+
+   
+
+    
+    
+</script>
+
+</html>
