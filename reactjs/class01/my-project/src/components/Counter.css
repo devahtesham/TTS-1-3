@@ -1,0 +1,8 @@
+.counter-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.counter-container button{
+    margin-top: 50px;
+}

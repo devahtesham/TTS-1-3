@@ -1,0 +1,10 @@
+.container{
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.container button{
+    border: none;
+    background-color: aqua;
+    padding: 10px 20px;
+}
