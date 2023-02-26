@@ -1,0 +1,12 @@
+form{
+    
+        text-align: center;
+        margin-top: 80px;
+    
+}
+form .name,form .email,form .password{
+    margin-bottom: 20px;
+}
+form label{
+    margin-right: 10px;
+}
